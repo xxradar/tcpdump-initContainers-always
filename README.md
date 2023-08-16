@@ -105,7 +105,8 @@ NAME                       READY   STATUS             RESTARTS      AGE
 ...
 mynginx-5c7565866b-flfct   2/2     Running            0             35m
 ...
-```## Testing
+```
+## Testing
 ```
 pod_ip=$(kubectl get po -o json  -l app=mynginx | jq -r .items[].status.podIP)
 ```
