@@ -18,7 +18,7 @@ curl https://raw.githubusercontent.com/xxradar/k8s-calico-oss-install-containerd
 ```
 curl https://raw.githubusercontent.com/xxradar/install_k8s_ubuntu/main/setup_node_latest.sh | bash
 ```
-- Run the join command on the worker nodes
+- Run the join command on the worker nodes (see output on control-plane node)
 ```
 sudo kubeadm join 10.11.2.231:6443 --token eow8gw.8863eelhollpn37p \
     --discovery-token-ca-cert-hash sha256:1e0ec482fcee39edbfzxxzxz5e6a7e57217bd1e57c23e2d318ef7e16759947e
