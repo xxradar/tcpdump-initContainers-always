@@ -99,7 +99,13 @@ EOF
 ```
 kubectl apply -f tcpdumper.yaml
 ```
-## Testing
+```
+kubectl get po
+NAME                       READY   STATUS             RESTARTS      AGE
+...
+mynginx-5c7565866b-flfct   2/2     Running            0             35m
+...
+```## Testing
 ```
 pod_ip=$(kubectl get po -o json  -l app=mynginx | jq -r .items[].status.podIP)
 ```
@@ -135,3 +141,11 @@ reading from file /opt/logs.pcap, link-type EN10MB (Ethernet), snapshot length 2
 13:52:55.373227 IP ip-10-0-2-140.eu-west-3.compute.internal.52600 > mynginx-5c7565866b-flfct.http: Flags [.], ack 855, win 481, options [nop,nop,TS val 1503500978 ecr 1488507085], length 0
 13:52:55.835262 IP6 fe80::98a8:75ff:fe4f:1767 > ff02::2: ICMP6, router solicitation, length 16
 ```
+## References
+- https://xxradar.medium.com/how-to-tcpdump-effectively-in-docker-2ed0a09b5406
+- https://xxradar.medium.com/how-to-tcpdump-effectively-in-kubernetes-part-1-a1546b683d2f
+- https://xxradar.medium.com/how-to-tcpdump-effectively-in-kubernetes-part-2-7e4127b42dc7
+- https://xxradar.medium.com/tcpdump-nc-and-k8s-fun-1276414907b5
+- https://xxradar.medium.com/how-to-tcpdump-using-ephemeral-containers-in-kubernetes-d066e6855785
+- https://xxradar.medium.com/termshark-in-docker-d4cf15807b48
+- https://xxradar.medium.com/mitmproxy-and-kubernetes-e897e903b1cb
