@@ -2,7 +2,7 @@
 As per https://kubernetes.io/docs/concepts/workloads/pods/init-containers/#api-for-sidecar-containers, K8S now allows you to 
 specify a restartPolicy for init containers which is independent of the Pod and other init containers.
 
-This features is available starting with Kubernetes 1.28 in alpha through a feature gate named SidecarContainers.
+This feature is available starting with Kubernetes 1.28 in alpha through a feature gate named SidecarContainers.
 Alpha features are NOT enabled by default.
 
 Through the years, I have been researching different ways to capture traffic in pods (see references).
